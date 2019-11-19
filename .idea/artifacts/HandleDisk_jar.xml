@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HandleDisk:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HandleDisk_jar</output-path>
+    <root id="archive" name="HandleDisk.jar">
+      <element id="module-output" name="HandleDisk" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/JTattoo-1.6.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/fileUtils.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/fileExtensions.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/view.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

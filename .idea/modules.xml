@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/get-videos-from-disk.iml" filepath="$PROJECT_DIR$/get-videos-from-disk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HandleDisk.iml" filepath="$PROJECT_DIR$/HandleDisk.iml" />
     </modules>
   </component>
 </project>
