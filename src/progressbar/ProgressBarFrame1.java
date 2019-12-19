@@ -23,7 +23,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
     public ProgressBarFrame1() {
         initComponents();
 //        new InformationPanel("Video1");
-//        new InformationPanel("Video2");
+        new InformationPanel("Video2");
     }
 
     /**
@@ -88,7 +88,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
         jScrollPane.setViewportView(jPanel2);
         jPanel2.getAccessibleContext().setAccessibleDescription("");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
                 jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,7 +132,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jScrollPane)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
                                                 .addGap(6, 6, 6)
                                                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap(11, Short.MAX_VALUE))
@@ -184,9 +184,11 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
     private void menuLabelMouseClicked(java.awt.event.MouseEvent evt) {
         if (!evt.getComponent().equals(selectedLabel)) {
             selectedLabel.setBackground(DEFAULT_TAG_COLOR);
+            labelToPanel.get(selectedLabel).setVisible(false);
         }
         selectedLabel = (JLabel) evt.getComponent();
         selectedLabel.setBackground(new Color(238, 130, 238));
+        labelToPanel.get(selectedLabel).setVisible(true);
     }
 
     // when user do not want to select any tag
@@ -258,6 +260,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
     private javax.swing.JLabel defaultLabel;
     private Map<javax.swing.JLabel, javax.swing.JPanel> labelToPanel;
     private javax.swing.GroupLayout jPanel2Layout;
+    private javax.swing.GroupLayout jPanel4Layout;
 
     public class InformationPanel {
         private javax.swing.JProgressBar jProgressBar2;
@@ -293,7 +296,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                                     .addGap(0, 267, Short.MAX_VALUE))
             );
             // create panel
-            javax.swing.JPanel jPanel3 = new javax.swing.JPanel();;
+            javax.swing.JPanel jPanel3 = new javax.swing.JPanel();
             jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
             javax.swing.JLabel videoName = new javax.swing.JLabel();
             videoName.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -399,7 +402,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                                                     .addComponent(jLabel2)))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jLabel7)
-                                    .addGap(6, 6, 6)
+                                    .addGap(0, 0, 0)
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel8)
                                             .addComponent(jLabel11))
@@ -413,8 +416,28 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(29, 29, 29))
+                                    .addGap(0, 0, 0))
             );
+
+
+            jPanel4Layout.setHorizontalGroup(
+                    jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                            .addContainerGap()
+                                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            );
+            jPanel4Layout.setVerticalGroup(
+                    jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                            .addContainerGap()
+                                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)))
+            );
+            jPanel3.setVisible(false);
             // add to map
             labelToPanel.put(menuLabel, jPanel3);
         }
