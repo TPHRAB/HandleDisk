@@ -155,7 +155,7 @@ public class GUI extends JFrame {
 				
 				try {
 					rootFrame.setVisible(false);
-					AutoProcessDisk1.moveVideosFromDisk(in, out, rootFrame);
+					AutoProcessDisk.moveVideosFromDisk(in, out, rootFrame);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 					JOptionPane.showMessageDialog(
@@ -252,7 +252,7 @@ public class GUI extends JFrame {
 					sourcePath1.setBackground(Color.RED);
 					return;
 				}
-				AutoProcessDisk1.sortVideos(in);
+				AutoProcessDisk.sortVideos(in);
 			}
 		});
 		btnStart1.setBounds(361, 131, 108, 23);
@@ -347,7 +347,7 @@ public class GUI extends JFrame {
 				
 				try {
 					rootFrame.setVisible(false);
-					AutoProcessDisk1.combineVideos(in, out, rootFrame);
+					AutoProcessDisk.combineVideos(in, out, rootFrame);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 					JOptionPane.showMessageDialog(

@@ -18,8 +18,8 @@ It is a dvd processor that can drag videos out of disk and
     - Linux: https://www.ffmpeg.org/download.html#build-linux
 3. If you don't have Java installed on your system, please download `jre(Java Runtime Enviroment)` from Oracle's
  official site: https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
-4. Create an empty folder and put the `executable jar file` from step 1, `ffmpeg` from step 2, installed `jre` from step
-3 into the same folder that you just created.
+4. Create an empty folder and put the `executable jar file` from step 1, `ffmpeg` from step 2, installed `jre` folder 
+from step 3 into the same folder that you just created.
     
 
 # Usage 
