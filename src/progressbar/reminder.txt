@@ -1,0 +1,2 @@
+jPanel2Layout problem
+    1. I want to add group to the ParallelGroup by using layout

@@ -23,7 +23,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
     public ProgressBarFrame1() {
         initComponents();
 //        new InformationPanel("Video1");
-        new InformationPanel("Video2");
+//        new InformationPanel("Video2");
     }
 
     /**
@@ -82,8 +82,9 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
             }
         });
 
-        jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
+//        jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+//        jPanel2.setLayout(jPanel2Layout);
+
 
         jScrollPane.setViewportView(jPanel2);
         jPanel2.getAccessibleContext().setAccessibleDescription("");
@@ -148,6 +149,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
         labelToPanel.put(defaultLabel, emptyPanel);
 
         selectedLabel = defaultLabel;
+        numberOfThreads = 0;
         pack();
     }// </editor-fold>
 
@@ -261,6 +263,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
     private Map<javax.swing.JLabel, javax.swing.JPanel> labelToPanel;
     private javax.swing.GroupLayout jPanel2Layout;
     private javax.swing.GroupLayout jPanel4Layout;
+    private int numberOfThreads;
 
     public class InformationPanel {
         private javax.swing.JProgressBar jProgressBar2;
@@ -283,18 +286,8 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                     menuLabelMouseExited(evt);
                 }
             });
-            jPanel2Layout.setHorizontalGroup(
-                    jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(menuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 29, Short.MAX_VALUE))
-            );
-            jPanel2Layout.setVerticalGroup(
-                    jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(menuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 267, Short.MAX_VALUE))
-            );
+            menuLabel.setBounds(javax.swing.GroupLayout.DEFAULT_SIZE, 46, javax.swing.GroupLayout.DEFAULT_SIZE, numberOfThreads * (46 + 5));
+            jPanel2.add(menuLabel);
             // create panel
             javax.swing.JPanel jPanel3 = new javax.swing.JPanel();
             jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -412,7 +405,6 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                                             .addComponent(jLabel12))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jLabel10)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel4)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -436,6 +428,7 @@ public class ProgressBarFrame1 extends javax.swing.JFrame {
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                             .addContainerGap()
                                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)))
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING))
             );
             jPanel3.setVisible(false);
             // add to map
