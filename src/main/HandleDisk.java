@@ -1,4 +1,4 @@
-package handledisk;
+package main;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -19,7 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Font;
 
-public class GUI extends JFrame {
+public class HandleDisk extends JFrame {
 	private JFrame rootFrame;
 	private JPanel contentPane;
 	private JTextField destinationPath;
@@ -36,7 +36,7 @@ public class GUI extends JFrame {
 			public void run() {
 				try {
 					UIManager.setLookAndFeel(extensions.view.GuiUtils.FAST_LOOK_AND_FEEL);
-					GUI frame = new GUI();
+					HandleDisk frame = new HandleDisk();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class GUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUI() {
+	public HandleDisk() {
 		this.rootFrame = this;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 816, 309);
